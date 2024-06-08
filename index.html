@@ -30,7 +30,7 @@
     .heart {
       position: fixed;
       color: #ff0080;
-      animation: fall 3s linear infinite;
+      animation: fall 4s linear infinite;
     }
 
     /* Animación para los corazones */
@@ -45,7 +45,7 @@
   </style>
 </head>
 <body>
-  <h1>PARA DESCUBRIR CADA SECRETO DEBES APRETAR LOS BOTONES AMOR<h1/>
+  <h1>PARA DESCUBRIR CADA SECRETO DEBES APRETAR LOS BOTONES AMOR🤩🤩🤩<h1/>
   <div id="container">
     <!-- Botón que muestra "TE AMO" -->
     <button class="button" onclick="mostrarTeAmo()">SECRETO N°1</button>
@@ -61,7 +61,7 @@
       // Obtener referencia al div para mostrar "TE AMO"
       var teAmoTextDiv = document.getElementById("teAmoText");
       // Establecer el contenido del div como "TE AMO" y un corazón
-      teAmoTextDiv.innerHTML = "&#10084;FELICES 6 AÑOS Y 8 MESES AMORSHITOOOOO!!!  TE AMOOOOOOOO MUUUUCHOOOO!!!"; // Corazón (Unicode) seguido de "TE AMO"
+      teAmoTextDiv.innerHTML = "&#10084;FELICES 6 AÑOS Y 8 MESES AMORSHITOOOOO!!!❤️ TE AMOOOOOOOO MUUUUCHOOOO!!!❤️❤️❤️❤️❤️❤️"; // Corazón (Unicode) seguido de "TE AMO"
       // Aplicar estilos al div
       teAmoTextDiv.style.fontSize = "30px";
       teAmoTextDiv.style.color = "red";
@@ -73,7 +73,7 @@
       for (var i = 0; i < 50; i++) {
         var heart = document.createElement("div");
         heart.className = "heart";
-        heart.innerHTML = "💜;";
+        heart.innerHTML = "💜";
         // Asigna posiciones aleatorias para cada corazón
         var leftPosition = Math.random() * window.innerWidth + "px";
         var topPosition = Math.random() * -100 + "px"; // Posición inicial por encima de la pantalla
