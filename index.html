@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar "TE AMO"</title>
+  <style>
+    /* Estilos para centrar el botón */
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Estilos para el botón */
+    .button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* Estilos para los corazones */
+    .heart {
+      position: fixed;
+      color: VIOLET;
+      animation: fall 3s linear infinite;
+    }
+
+    /* Animación para los corazones */
+    @keyframes fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <!-- Botón que muestra "TE AMO" -->
+    <button class="button" onclick="mostrarTeAmo()">SECRETO N°1</button>
+    <!-- Botón para la cascada de corazones -->
+    <button class="button" onclick="mostrarCascada()">SECRETO N°2</button>
+    <!-- Div para mostrar la palabra "TE AMO" -->
+    <div id="teAmoText"></div>
+  </div>
+
+  <script>
+    // Función que muestra "TE AMO" al lado del botón
+    function mostrarTeAmo() {
+      // Obtener referencia al div para mostrar "TE AMO"
+      var teAmoTextDiv = document.getElementById("teAmoText");
+      // Establecer el contenido del div como "TE AMO" y un corazón
+      teAmoTextDiv.innerHTML = "&#10084;FELICES 6 AÑOS Y 8 MESES AMORSHITOOOOO!!!  TE AMOOOOOOOO MUUUUCHOOOO!!!"; // Corazón (Unicode) seguido de "TE AMO"
+      // Aplicar estilos al div
+      teAmoTextDiv.style.fontSize = "72px";
+      teAmoTextDiv.style.color = "red";
+    }
+
+    // Función que muestra una cascada de corazones
+    function mostrarCascada() {
+      // Crea un nuevo elemento div para cada corazón y lo añade al cuerpo del documento
+      for (var i = 0; i < 50; i++) {
+        var heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "&#10084;";
+        // Asigna posiciones aleatorias para cada corazón
+        var leftPosition = Math.random() * window.innerWidth + "px";
+        var topPosition = Math.random() * -100 + "px"; // Posición inicial por encima de la pantalla
+        heart.style.left = leftPosition;
+        heart.style.top = topPosition;
+        document.body.appendChild(heart);
+      }
+    }
+  </script>
+</body>
+</html>
+￼Enter
